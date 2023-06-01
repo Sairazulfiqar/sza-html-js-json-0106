@@ -6,10 +6,11 @@ fetch('data.json')
     codigo_HTML = "<h1>"+respuesta.nombre+"<h1>";
     codigo_HTML += "<h2>"+respuesta.email+"<h2>";
     codigo_HTML +="<ul>";
-    respuesta.work.array.forEach(element => {
-        codigo_HTML += "<li>"+element.empresa+"-"+element.ubicación+"<li>"
+    respuesta.works.forEach(element => {
+        codigo_HTML += "<li>" +element.empresa+"-"+element.ubicacion+""+ "<br>" + element.f_start+"/"+ element.f_end+"</li>"
     });
-    codigo_HTML = "</ul>"
+    codigo_HTML += "</ul>"
+    codigo_HTML += "<h3>"+respuesta.sofskills+"<h3>";
     elemento.innerHTML = codigo_HTML; 
 })
 .catch(error => {
