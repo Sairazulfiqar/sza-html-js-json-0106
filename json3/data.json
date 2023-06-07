@@ -2,6 +2,7 @@
     "nombre":"Saira Zulfiqar",
     "email": "sairazulfiqar@hotmail.com",
     "edad": 28,
+    
     "works": [
         {
             "empresa": "Seprotec",
@@ -22,6 +23,15 @@
             "f_end":"2012-12-01"
         }
     ],
+
+    "Educación":[
+        {
+            "institucion": "Universidad Pompeu Fabra",
+            "título": "Ciencias Políticas y de la Administración",
+            "fecha": "2015-2019"
+        }
+    ],
+
     "sofskills": [
         "creativa",
         "profesional",
