@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/expresiones.regulares/style.css">
 </head>
 <body>
-    <form name="formulario" onsubmit="validation()" action="confirmation.php" 
+    <form name="formulario" onsubmit=" return validation()" action="confirmation.php" 
     method="post"> 
         <div class="row">
             <label for="nombre">Nombre:</label>
@@ -22,6 +22,13 @@
             <input type="email" onkeyup="validarEmail()" id="email" class="email" name="email">
             <div class="error" id="erroremail"></div>
         </div>
+
+        <div class="row">
+            <label for="dninie">DNI/NIE:</label>
+            <input type="dninie" onkeyup="validarDniNie()" placeholder="X12345678X-12345678X" id="dninie" class="dninie" name="dninie">
+            <div class="error" id="errordninie"></div>
+        </div>
+
         <div class="row">
             <label for="telf">Telf:</label>
             <input type="telf" onkeyup="validarTelf()" id="telf" class="telf" name="telf">
@@ -30,10 +37,28 @@
         <div class="row">
             <label>Género</label>
             <div>
-                <label> <input type="checkbox" name="gender" value="whatever"> Male</label>
-                <label> <input type="checkbox" name="gender" value="this"> Female</label>
-                <label> <input type="checkbox" name="gender" value="that"> x</label>
+                <label> <input type="radio" name="gender" value="Male"> Male</label>
+                <label> <input type="radio" name="gender" value="Female"> Female</label>
+                <label> <input type="radio" name="gender" value="x"> x</label>
             </div>
+        </div>
+
+        <div class="row">
+            <label>Hobbies <i>(Optional)</i> </label>
+            <div>
+                <label><input type="checkbox" name="vicio" value="deporte"> deporte</label>
+                <label><input type="checkbox" name="vicio" value="cine"> cine</label>
+                <label><input type="checkbox" name="vicio" value="música"> musica</label>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <label>GRPD</label>
+            <div>
+                <label><input type="checkbox" name="grpd" onclick="validarGRPD()" value="grpd">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt incidunt nulla neque voluptate cupiditate totam?</label>
+            </div>
+            <div class="error" id="errorGRPD"> </div>
         </div>
         <input type="submit" value="Enviar">
 

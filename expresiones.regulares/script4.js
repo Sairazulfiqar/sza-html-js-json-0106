@@ -7,16 +7,17 @@ function mostrarError (id,txt){
 function validarNombre (){
     var nombre= document.formulario.nombre.value;
     if (nombre === ""){
-        document.getElementById("errorNombre").innerHTML="ERROR: Campo vacio"
+        mostrarError("errorNombre","ERROR:Campo vacio");
     }
     else {
-        document.getElementById("errorNombre").innerHTML=""
-        var regex = /^[a-zA-Z\s]+$/
+        mostrarError("errorNombre","");
+        var regex = /^[a-zA-Z\s]+$/;
         if (regex.test(nombre) === false){
-            document.getElementById("errorNombre").innerHTML="ERROR: Formato inválido";
+            mostrarError("errorNombre","ERROR: Formato inválido");
         }
         else {
-            document.getElementById("errorNombre").innerHTML="";
+            mostrarError("errorNombre","");
+            NombreError = false;
         }
     }
 }
@@ -34,6 +35,27 @@ function validarEmail (){
         }
         else {
             document.getElementById("erroremail").innerHTML="";
+        }
+    }
+}
+
+function validarDniNie (){
+    let DniNie = document.formulario.dninie.value;
+    if (dninie === ""){
+        mostrarError("errordninie","ERROR: Campo vacio");
+    }
+    else {
+        mostrarError("errordninie","");
+        var regex = /^[XYZ]?\d{8}[A-Z]$/;
+        if (regex.test(DniNie) === false){
+            mostrarError("errorDniNie","ERROR: Formato DNI/NIE inválido");
+        }
+        else {
+            mostrarError("errordninie","");
+            dninieError = false;
+            let letraUser = DniNie[DniNie.lenght-1]
+            parseIn(DniNie[0].isNan())?dni=false:dni=true;
+            alert(numeroDni);
         }
     }
 }
@@ -60,6 +82,22 @@ function validarTelf (){
 
 // esto simplemente devuelve un true o un false:
 function validation(){
-    if (!NombreError && !EmailError && !TelfError) return true;
-    else return false; 
+    if (!NombreError && !EmailError && !TelfError && !GRPDError) return true;
+    else {
+        validarNombre();
+        validarEmail();
+        validarDniNie();
+        validarTelf();
+        validarGRPD();
+        return false;
+    }
+}
+
+function validarGRPD(){
+    let grpd= document.formulario.grpd.checked;
+    console.log(grpd);
+    if (grpd){
+        mostrarError("errorGRPD","");
+        GRPDError = false;
+}
 }
