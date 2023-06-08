@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/expresiones.regulares/style.css">
 </head>
 <body>
-    <form name="formulario" onsubmit=" return validation()" action="confirmation.php" 
+    <form name="formulario" onsubmit="return validation()" action="confirmation.php" 
     method="post"> 
         <div class="row">
             <label for="nombre">Nombre:</label>
@@ -25,7 +25,7 @@
 
         <div class="row">
             <label for="dninie">DNI/NIE:</label>
-            <input type="dninie" onkeyup="validarDniNie()" placeholder="X12345678X-12345678X" id="dninie" class="dninie" name="dninie">
+            <input type="dninie" onkeyup="validarDniNie()" placeholder="X1234567X-12345678X" id="dninie" class="dninie" name="dninie">
             <div class="error" id="errordninie"></div>
         </div>
 

@@ -1,7 +1,9 @@
-let NombreError = EmailError = TelfError = true; 
+const LETRAS = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z','S','Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+
+let NombreError = EmailError = TelfError = dninieError = GRPDError = true; 
 
 function mostrarError (id,txt){
-    document.getElementById(id).innerHTML = txt;
+    document.getElementById(id).innerHTML=txt;
 }
 
 function validarNombre (){
@@ -47,17 +49,18 @@ function validarDniNie (){
             mostrarError("errorDniNie","ERROR: Formato DNI/NIE inválido");
         }
         else {
-            mostrarError("errordninie","");
-            dninieError = false;
-            let letra = DniNie[]
+
+            let letra = DniNie[DniNie.length-1];
             regex = /\d+/g;
             dni= parseInt(DniNie.match(regex));
-            console.log(dni)
-
-            let letraUser = DniNie[DniNie.lenght-1];
+            if (LETRAS[dni % 23] != letra){
+                mostrarError("Errordninie","ERROR:Letra no correcta");
+            }
+            else{
+                mostrarError("errornienie","");
+            }
         }
     }
-}
 
 function validarTelf (){
     var telf= document.formulario.telf.value;
