@@ -40,22 +40,21 @@ function validarEmail (){
 }
 
 function validarDniNie (){
-    let DniNie = document.formulario.dninie.value;
-    if (dninie === ""){
-        mostrarError("errordninie","ERROR: Campo vacio");
-    }
-    else {
-        mostrarError("errordninie","");
-        var regex = /^[XYZ]?\d{8}[A-Z]$/;
+    let DniNie = '';
+    DniNie = document.formulario.dninie.value;
+    var regex = /^[XYZ]?\d{8}[A-Z]$/;
         if (regex.test(DniNie) === false){
             mostrarError("errorDniNie","ERROR: Formato DNI/NIE inválido");
         }
         else {
             mostrarError("errordninie","");
             dninieError = false;
-            let letraUser = DniNie[DniNie.lenght-1]
-            parseIn(DniNie[0].isNan())?dni=false:dni=true;
-            alert(numeroDni);
+            let letra = DniNie[]
+            regex = /\d+/g;
+            dni= parseInt(DniNie.match(regex));
+            console.log(dni)
+
+            let letraUser = DniNie[DniNie.lenght-1];
         }
     }
 }
