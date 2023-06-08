@@ -46,7 +46,7 @@ function validarDniNie (){
     DniNie = document.formulario.dninie.value;
     var regex = /^[XYZ]?\d{8}[A-Z]$/;
         if (regex.test(DniNie) === false){
-            mostrarError("errorDniNie","ERROR: Formato DNI/NIE inválido");
+            mostrarError("errordninie","ERROR: Formato DNI/NIE inválido");
         }
         else {
 
@@ -54,10 +54,10 @@ function validarDniNie (){
             regex = /\d+/g;
             dni= parseInt(DniNie.match(regex));
             if (LETRAS[dni % 23] != letra){
-                mostrarError("Errordninie","ERROR:Letra no correcta");
+                mostrarError("errordninie","ERROR:Letra no correcta");
             }
             else{
-                mostrarError("errornienie","");
+                mostrarError("errordninie","");
             }
         }
     }
@@ -97,7 +97,6 @@ function validation(){
 
 function validarGRPD(){
     let grpd= document.formulario.grpd.checked;
-    console.log(grpd);
     if (grpd){
         mostrarError("errorGRPD","");
         GRPDError = false;
