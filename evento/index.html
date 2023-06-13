@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" >
+        <div id="mysquare"></div>
+    </div>
+
+    <script>
+        const container = document.getElementById('container');
+        let shape = 1; //Variable para realizar un seguimiento de la 
+
+        //crear elemento cuadrado
+        const square = document.createElement('div');
+        square.id= 'mysquare';
+
+        container.appendChild(square);
+
+        //agregar un manejaor de eventos para el evento de clic
+        square.addEventListener('click', function(){
+            shape++;
+
+            //cambiar la forma del cuadrado
+            if (shape === 1){
+                square.style.borderRadius = '0';
+            } else if (shape === 2){
+                square.style.borderRadius = '50%';
+            } else if  (shape ===3){
+                square.style.borderRadius = '0';
+                square.style.transform = 'rotate(45deg)';
+            } else {
+                shape=0;
+                square.style.borderRadius ='10px';
+                square.style.transform = 'rotate(0)';
+            }
+        });
+
+        square.addEventListener('mouseover', function(){
+
+            square.style.background = 'red';
+        });
+
+        square.addEventListener('mouseover', function(){
+            square.style.background = 'blue';
+        });
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

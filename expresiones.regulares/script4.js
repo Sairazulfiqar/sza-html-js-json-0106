@@ -2,6 +2,13 @@ const LETRAS = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N',
 
 let NombreError = EmailError = TelfError = dninieError = GRPDError = true; 
 
+function iniciar(){
+    document.formulario.nombre.value= localStorage.getItem('Nombreform');
+    document.formulario.email.value= localStorage.getItem('Emailform');
+    document.formulario.dninie.value= localStorage.getItem('DniNieform');
+    document.formulario.telf.value= localStorage.getItem('Telfform');
+}
+
 function mostrarError (id,txt){
     document.getElementById(id).innerHTML=txt;
 }
@@ -20,6 +27,7 @@ function validarNombre (){
         else {
             mostrarError("errorNombre","");
             NombreError = false;
+            localStorage.setItem("Nombreform", nombre);
         }
     }
 }
@@ -37,6 +45,8 @@ function validarEmail (){
         }
         else {
             document.getElementById("erroremail").innerHTML="";
+            EmailError = false;
+            localStorage.setItem("Emailform", email);
         }
     }
 }
@@ -58,6 +68,8 @@ function validarDniNie (){
             }
             else{
                 mostrarError("errordninie","");
+                DniNieError = false;
+                localStorage.setItem("DniNieform", dninie);
             }
         }
     }
@@ -75,6 +87,8 @@ function validarTelf (){
         }
         else {
             document.getElementById("errortelf").innerHTML="";
+            TelfError = false;
+            localStorage.setItem("Telfform", telf);
         }
     }
 }
@@ -84,7 +98,10 @@ function validarTelf (){
 
 // esto simplemente devuelve un true o un false:
 function validation(){
-    if (!NombreError && !EmailError && !TelfError && !GRPDError) return true;
+    if (!NombreError && !EmailError && !TelfError && !GRPDError){
+        localStorage.clear();
+        return true;
+    } 
     else {
         validarNombre();
         validarEmail();
@@ -101,4 +118,10 @@ function validarGRPD(){
         mostrarError("errorGRPD","");
         GRPDError = false;
 }
+else{
+    mostrarError("errorGRPD","");
+
 }
+}
+
+window.addEventListener("load", iniciar);
