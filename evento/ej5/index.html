@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/evento/ej5/style.css">
+</head>
+<body>
+    
+   
+    <button class="show"> Mostrar</button>
+    <button class="hide"> Ocultar </button>
+
+    <div class="div"> Div que se oculta o muestra </div>
+
+    <script> 
+
+    const div = document.querySelector('div');
+
+    document.querySelector('.hide').addEventListener('click', 
+    ()=> {
+        div.classList.add('div_hide')
+    });
+
+    document.querySelector('.show').addEventListener('click', 
+    ()=> {
+        div.classList.add('div_hide')
+    });
+
+    </script>
+</body>
+</html>

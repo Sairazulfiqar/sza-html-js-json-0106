@@ -1,7 +1,7 @@
 
 var button = document.getElementById('CambiarColorBtn');
-var dilElement = document.getElementById('midiv');
+var divElement = document.getElementsById('container');
 
 button.addEventListener('click', function() { 
-    divElement.style.backgroundColor = 'red';
+    divElement.style.backgroundColor = "FF0000";
 });
