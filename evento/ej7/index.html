@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/sza-html-js-json-0106/evento/ej7/style.css">
+</head>
+<body>
+    <form name="formulario" onsubmit="return validation()" action="confirm.php" method="post">
+
+        <div class="row">
+            <label for="nombre"> Nombre: </label>
+            <input type="nombre" onkeyup="validarNombre()"  id="nombre" class="nombre" name="nombre">
+            <div class="error" id="errornombre"></div>
+        </div>
+
+        <div class="row">
+            <label for="telf">Telf:</label>
+            <input type="telf" onkeyup="validarTelf()" id="telf" class="telf" name="telf">
+            <div class="error" id="errortelf"></div>
+        </div>
+
+        <input type="submit" value="Enviar">
+    
+    </form>
+    
+    <script src="/sza-html-js-json-0106/evento/ej7/script.js"> </script>
+</body>
+</html>

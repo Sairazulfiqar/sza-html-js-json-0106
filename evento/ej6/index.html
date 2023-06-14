@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text"> Cambiar tamaño de la fuente </p>
+    <input type="range" min="0" max="30" step="0" value="slider" id="wordslider">
+</body>
+
+<script>
+    const p = document.getElementById("text");
+    var input =  document.querySelector('input');
+
+    input.addEventListener('input', cambiar)
+
+    function cambiar(){
+        p.style.fontSize = this.value + "px";
+    }
+
+</script>
+
+</html>
