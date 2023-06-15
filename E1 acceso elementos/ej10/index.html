@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 10. Enunciado: Mostrar el valor seleccionado de un elemento <select> al hacer clic en un
+        botón. -->
+
+        <div> </div>
+
+        <select name="'hello world" id="select">
+            <option value="Sunshine"> Sunshine</option>
+            <option value="Rainy"> Rainy</option>
+        </select>
+
+        <button id="btn"> Mostrar valor </button>
+
+
+    <script>
+        var button = document.getElementById('btn');
+        var select = document.getElementById('select');
+
+        button.addEventListener('click', function(){
+            var indiceSeleccionado = select.selectedIndex;
+            var opcionSeleccionada = select.options[indiceSeleccionado].text;
+            alert(opcionSeleccionada);
+        })
+    </script>
+</body>
+</html>
