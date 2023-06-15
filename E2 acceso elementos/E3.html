@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 3. Enunciado: Implementar una función que valide si un campo de texto contiene un correo
+    electrónico válido al perder el foco. Debe mostrar un mensaje de error si el correo no es
+    válido. -->
+
+    <form name="formulario" onsubmit="return validation()" action="corfirm.php" method="post">
+
+        <div class="row">
+            <label for="email">Email:</label>
+            <input type="email" onkeyup="validarEmail()" id="email" class="email" name="email">
+            <div class="error" id="erroremail"></div>
+        </div>
+
+    </form>
+
+    <script src="/sza-html-js-json-0106/E2 acceso elementos/script3.js"> </script>
+
+</body>
+
+</html>

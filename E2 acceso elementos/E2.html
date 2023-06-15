@@ -8,13 +8,21 @@
 <body>
     <!-- Enunciado: Crear una función que reciba como parámetro un color en formato hexadecimal
 y aplique ese color de fondo a todos los elementos <p> de la página. -->
-    <p> Hello</p>
-    <p> Hello</p>
-    <p> Hello</p>
-    <p> Hello</p>
-
-    <script> 
     
+        <p> Hello</p>
+        <p> Hello</p>
+        <p> Hello</p>
+        <p> Hello</p>
+
+    <button onclick="addcolor()"> prueba </button>
+    
+    <script> 
+
+    function addcolor(){
+
+        var pElement = document.querySelectorAll('p').forEach(e => e.style.color = "#FF0000");
+    }
+
     </script>
     
 </body>
