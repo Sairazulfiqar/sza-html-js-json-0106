@@ -12,43 +12,18 @@ una serie de miniaturas. Al hacer clic en una miniatura, se debe actualizar la i
 con la imagen correspondiente. -->
 
     <div class="images"> 
-        <div class="images">
-            <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/henrik-donnestad-t2Sai-AqIpI-unsplash.jpg" alt="" style="width:300px;height:300px;" class="images">
-        </div>
-        <div class="images">
-            <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/maria-orlova-bU8TeXhsPcY-unsplash.jpg" alt="" style="width:200px;height:200px;"  class= "images" >
-        </div>
-        <div class="images">
-            <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/steve-johnson-3Sf_G9m0gcQ-unsplash.jpg" alt="" style="width:200px;height:200px;" class="images">
-        </div>
-        <div class="images">
-            <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/steve-johnson-5MTf9XyVVgM-unsplash.jpg" alt="" style="width:200px;height:200px;" class="images" >
-        </div>
-
+        <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/henrik-donnestad-t2Sai-AqIpI-unsplash.jpg" alt="Blue" width='300px' height='300px' class="images">
+        <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/maria-orlova-bU8TeXhsPcY-unsplash.jpg" alt="purple" width='200px' height='200px'  class= "images">
+        <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/steve-johnson-3Sf_G9m0gcQ-unsplash.jpg" alt="darkblue" width='200px' height='200px' class="images">
+        <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/steve-johnson-5MTf9XyVVgM-unsplash.jpg" alt="multi" width='200px' height='200px' class="images">
     </div>
 
-<script>
+<script> 
 
-        function changesize ('onclick',img) {
-            img.style.width = '300px';
-            img.style.height = '300px';
-        }
-
-    // document.querySelectorAll('img').onclick =
-    //     function(){
-    //         var imagenes = document.getElementsByClassName('images');
-    //         img.style.width = '300px';
-    //         img.style.height='300px';
-    //         return img;
-
-    //     }
-
-    // var imagenes= document.getElementsByClassName('images');
-
-    // imagenes.addEventlistener('onclick', function(){
-    //     imgElement.style.width = '300px';
-    //     imgElement.style.height= '300px';
-    // });
+document.getElementsByClassName('images').onclick = function(){
+    images.style.height='300px';
+    images.style.width='300px';
+}
 
 </script>
 </body>
