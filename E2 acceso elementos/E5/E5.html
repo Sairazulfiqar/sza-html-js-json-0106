@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/sza-html-js-json-0106/E2 acceso elementos/E5/style.css">
+</head>
+<body>
+    <!-- Enunciado: Implementar una galería de imágenes en la que se muestre una imagen grande y
+una serie de miniaturas. Al hacer clic en una miniatura, se debe actualizar la imagen grande
+con la imagen correspondiente. -->
+
+    <div class="images"> 
+        <div class="images">
+            <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/henrik-donnestad-t2Sai-AqIpI-unsplash.jpg" alt="" style="width:300px;height:300px;" class="images">
+        </div>
+        <div class="images">
+            <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/maria-orlova-bU8TeXhsPcY-unsplash.jpg" alt="" style="width:200px;height:200px;"  class= "images" >
+        </div>
+        <div class="images">
+            <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/steve-johnson-3Sf_G9m0gcQ-unsplash.jpg" alt="" style="width:200px;height:200px;" class="images">
+        </div>
+        <div class="images">
+            <img src="/sza-html-js-json-0106/E2 acceso elementos/E5/img/steve-johnson-5MTf9XyVVgM-unsplash.jpg" alt="" style="width:200px;height:200px;" class="images" >
+        </div>
+
+    </div>
+
+<script>
+
+        function changesize ('onclick',img) {
+            img.style.width = '300px';
+            img.style.height = '300px';
+        }
+
+    // document.querySelectorAll('img').onclick =
+    //     function(){
+    //         var imagenes = document.getElementsByClassName('images');
+    //         img.style.width = '300px';
+    //         img.style.height='300px';
+    //         return img;
+
+    //     }
+
+    // var imagenes= document.getElementsByClassName('images');
+
+    // imagenes.addEventlistener('onclick', function(){
+    //     imgElement.style.width = '300px';
+    //     imgElement.style.height= '300px';
+    // });
+
+</script>
+</body>
+</html>
